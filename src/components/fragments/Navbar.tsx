@@ -1,18 +1,24 @@
 // import Link from "next/link";
 import React from "react";
+type NavStates = {
+  All: boolean;
+  About: boolean;
+  Work: boolean;
+};
 
-export default function Navbar({
-  navStates,
-  setNavStates,
-}: {
-  navStates: { [key: string]: boolean };
-  setNavStates: React.Dispatch<
-    React.SetStateAction<{ [key: string]: boolean }>
-  >
-}) {
-  const navbarRoute = [{ name: "All" }, { name: "About" }, { name: "Work" }];
+type NavbarProps = {
+  navStates: NavStates;
+  setNavStates: React.Dispatch<React.SetStateAction<NavStates>>;
+};
 
-  const handleClick = (name: string) => {
+export default function Navbar({ navStates, setNavStates }: NavbarProps) {
+  const navbarRoute = [
+    { name: "All" as const },
+    { name: "About" as const },
+    { name: "Work" as const },
+  ];
+
+  const handleClick = (name: keyof NavStates) => {
     setNavStates((prev) => ({
       ...prev,
       [name]: !prev[name],
