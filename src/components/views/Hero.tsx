@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 import { TextEffect } from "../TextEffect";
 import Link from "next/link";
 
-//test
+//testsekalilg
 export default function Hero() {
   return (
     <div>
