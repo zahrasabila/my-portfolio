@@ -11,7 +11,7 @@ const features = [
       { desc: "ShadcnUI" },
     ],
     sub_desc: "Group Project At Connextion",
-    href: "/",
+    href: "https://onesport-web.vercel.app/",
     cta: "Go to the site",
     background: (
       <Image

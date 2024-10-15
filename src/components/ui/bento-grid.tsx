@@ -81,7 +81,7 @@ const BentoCard = ({
         size="sm"
         className="pointer-events-auto rounded-full"
       >
-        <a href={href}>
+        <a href={href} rel="_blank">
           {cta}
           <ArrowRightIcon className="ml-2 h-4 w-4" />
         </a>
