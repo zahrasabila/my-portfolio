@@ -32,7 +32,7 @@ export default function GithubCardShiny({
     <div ref={containerRef} className={cn("group relative ", className)}>
       <div
         ref={overlayRef}
-        className="github-card-shiny -z-10 absolute min-h-80 w-80 rounded-full opacity-0 bg-blend-soft-light blur-3xl transition-opacity group-hover:opacity-90"
+        className="hidden md:block github-card-shiny -z-10 absolute min-h-80 w-80 rounded-full opacity-0 bg-blend-soft-light blur-3xl transition-opacity group-hover:opacity-90"
         style={{
           transform: "translate(var(--x), var(--y))",
         }}

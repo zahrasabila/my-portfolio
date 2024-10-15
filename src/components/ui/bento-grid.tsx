@@ -58,11 +58,11 @@ const BentoCard = ({
         {sub_desc}
       </h3>
       <h2 className=" font-alata uppercase text-neutral-700">{name}</h2>
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap">
         {description.map((desc, index) => (
           <p
             key={index}
-            className="max-w-lg  min-w-10 text-sm text-center font-alata bg-neutral-200 py-1 px-2 rounded-full text-blue-950"
+            className="max-w-lg w-fit min-w-10 text-sm text-center font-alata bg-neutral-200 py-1 px-2 rounded-full text-blue-950"
           >
             {desc.desc}
           </p>
@@ -72,10 +72,15 @@ const BentoCard = ({
 
     <div
       className={cn(
-        "pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover/card:translate-y-0 group-hover/card:opacity-100"
+        "pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center py-4 opacity-0 transition-all duration-300 group-hover/card:translate-y-0 group-hover/card:opacity-100"
       )}
     >
-      <Button variant="ghost" asChild size="sm" className="pointer-events-auto">
+      <Button
+        variant="outline"
+        asChild
+        size="sm"
+        className="pointer-events-auto rounded-full"
+      >
         <a href={href}>
           {cta}
           <ArrowRightIcon className="ml-2 h-4 w-4" />

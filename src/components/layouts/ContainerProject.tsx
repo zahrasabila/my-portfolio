@@ -3,10 +3,31 @@ import Image from "next/image";
 
 const features = [
   {
+    name: "Onesport Website",
+    description: [
+      { desc: "NextJS" },
+      { desc: "TailwindCSS" },
+      { desc: "React Query" },
+      { desc: "ShadcnUI" },
+    ],
+    sub_desc: "Group Project At Connextion",
+    href: "/",
+    cta: "Go to the site",
+    background: (
+      <Image
+        src="https://res.cloudinary.com/dbvyywl6v/image/upload/v1728986959/Screenshot_2024-10-15_170557_of77xe.png"
+        className="relative rounded-xl shadow-lg h-40 lg:h-full transition-all duration-300 ease-out group-hover/card:scale-105"
+        alt="Background"
+        width={1078}
+        height={668}
+      />
+    ),
+  },
+  {
     name: "Aroma Bumi Website",
     description: [{ desc: "ReactJS" }, { desc: "CSS" }],
-    sub_desc: "Project At Progate",
-    href: "/",
+    sub_desc: "Self Project At Progate",
+    href: "https://zahrasabila.github.io/aroma-bumi/",
     cta: "Go to the site",
     background: (
       <Image
@@ -22,7 +43,7 @@ const features = [
     name: "HIMSI Website",
     description: [{ desc: "ReactJS" }, { desc: "CSS" }, { desc: "Bootstrap" }],
     sub_desc: "Group Project At Mini Club Developer",
-    href: "/",
+    href: "https://web-himsi.netlify.app/",
     cta: "Go to the site",
     background: (
       <Image
@@ -36,14 +57,9 @@ const features = [
   },
   {
     name: "TEDxUINJakarta Website",
-    description: [
-      { desc: "ReactJS" },
-      { desc: "CSS" },
-      { desc: "Axios" },
-      { desc: "REST API" },
-    ],
+    description: [{ desc: "ReactJS" }, { desc: "CSS" }, { desc: "Axios" }],
     sub_desc: "Group Project At TEDxUINJakarta",
-    href: "/",
+    href: "https://tedxuinjakarta.com/",
     cta: "Go to the site",
     background: (
       <Image
@@ -52,20 +68,6 @@ const features = [
         alt="Background"
         width={1070}
         height={650}
-      />
-    ),
-  },
-  {
-    name: "Calendar",
-    description: [{ desc: "Use the calendar to filter your files by date." }],
-    sub_desc: "Project At Progate",
-    href: "/",
-    cta: "Learn more",
-    background: (
-      <img
-        src="/path-to-your-image.jpg"
-        className="relative -right-20 -top-20 opacity-60"
-        alt="Background"
       />
     ),
   },

@@ -3,6 +3,7 @@ import Container from "../layouts/Container";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { TextEffect } from "../TextEffect";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -46,18 +47,24 @@ export default function Hero() {
               </h1>
             </div>
             <div className="flex gap-4 flex-wrap">
-              <Button
-                variant="outline"
-                type="button"
-                className="relative border-muted"
+              <Link
+                href="./zahrasabila_resume.pdf"
+                download={true}
+                target="_blank"
               >
-                {" "}
-                <div className="blur">
-                  <span className="glow"></span>
-                </div>
-                <span className="glow rounded-full"></span>
-                Download CV
-              </Button>
+                <Button
+                  variant="outline"
+                  type="button"
+                  className="relative border-muted"
+                >
+                  {" "}
+                  <div className="blur">
+                    <span className="glow"></span>
+                  </div>
+                  <span className="glow rounded-full"></span>
+                  Download CV
+                </Button>
+              </Link>
               <div className="flex items-center gap-2">
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>

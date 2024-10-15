@@ -12,7 +12,7 @@ export default function About() {
     // <div className="flex gap-4 flex-wrap xs:flex-nowrap"></div>
     <Container className="space-y-3">
       <h2 className="uppercase">About me</h2>
-      <p className="font-vietnam font-light text-sm text-wrap">
+      <p className="font-vietnam font-light text-base text-wrap overflow-auto max-h-36">
         A dedicated 5th-semester Information Systems student with a passion for
         technology and Web Development. Currently living in Depok, Indonesia.
       </p>
