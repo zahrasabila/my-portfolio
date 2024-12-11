@@ -24,8 +24,10 @@ export default function Navbar({ navStates, setNavStates }: NavbarProps) {
           <li className="">
             <button
               onClick={() => handleClick(nav.name)}
-              className={`${
-                nav.name === "All" ? "active" : ""
+              className={` ${
+                navStates === nav.name
+                  ? "bg-black text-white"
+                  : "text-black hover:text-muted-foreground"
               } active:bg-black rounded-full active:text-white focus:bg-black focus:text-white text-black px-4 py-2 hover:text-muted-foreground`}
             >
               {nav.name}

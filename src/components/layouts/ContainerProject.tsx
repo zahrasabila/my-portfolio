@@ -1,9 +1,6 @@
 import { BentoCard, BentoGrid } from "../ui/bento-grid";
 import Image from "next/image";
-type NavbarProps = {
-  navStates: string;
-  setNavStates: React.Dispatch<React.SetStateAction<string>>;
-};
+
 const features = [
   {
     name: "Onesport Website",
@@ -76,19 +73,14 @@ const features = [
   },
 ];
 
-export function BentoDemo({ navStates, setNavStates }: NavbarProps) {
+export function BentoDemo({ navStates }: { navStates: string }) {
   return (
     // <div className="">
     <div>
       <BentoGrid>
         {features.map((feature) => (
           <div key={feature.name}>
-            <BentoCard
-              key={feature.name}
-              {...feature}
-              navStates={navStates}
-              setNavStates={setNavStates}
-            />
+            <BentoCard key={feature.name} {...feature} navStates={navStates} />
           </div>
         ))}
       </BentoGrid>

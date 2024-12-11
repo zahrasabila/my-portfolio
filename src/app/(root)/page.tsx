@@ -36,7 +36,7 @@ export default function Home() {
           <Social />
         </section>
         <section>
-          <BentoDemo navStates={navStates} setNavStates={setNavStates} />
+          <BentoDemo navStates={navStates} />
         </section>
       </main>
     </div>
