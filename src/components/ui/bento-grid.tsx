@@ -4,6 +4,10 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
+type NavbarProps = {
+  navStates: string;
+  setNavStates: React.Dispatch<React.SetStateAction<string>>;
+};
 const BentoGrid = ({
   children,
   className,
@@ -31,6 +35,8 @@ const BentoCard = ({
   sub_desc,
   href,
   cta,
+  navStates,
+  setNavStates,
 }: {
   name: string;
   className?: string;
@@ -39,11 +45,14 @@ const BentoCard = ({
   sub_desc: string;
   href: string;
   cta: string;
+  navStates: string;
+  setNavStates: NavbarProps;
 }) => (
   <div
     key={name}
     className={cn(
       "group/card relative p-6 sm:p-8 flex flex-col justify-between container rounded-3xl overflow-hidden",
+      navStates === "About" ? "h-0 hidden" : "relative",
       // light styles
       // "bg-white hover:bg-opacity-70 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] bg-opacity-50",
       "bg-white",
@@ -81,7 +90,7 @@ const BentoCard = ({
         size="sm"
         className="pointer-events-auto rounded-full"
       >
-        <a href={href} rel="_blank">
+        <a href={href} target="_blank">
           {cta}
           <ArrowRightIcon className="ml-2 h-4 w-4" />
         </a>
