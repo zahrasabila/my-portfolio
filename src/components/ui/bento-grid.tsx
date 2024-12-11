@@ -4,10 +4,6 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-type NavbarProps = {
-  navStates: string;
-  setNavStates: React.Dispatch<React.SetStateAction<string>>;
-};
 const BentoGrid = ({
   children,
   className,
@@ -46,7 +42,7 @@ const BentoCard = ({
   href: string;
   cta: string;
   navStates: string;
-  setNavStates: NavbarProps;
+  setNavStates: React.Dispatch<React.SetStateAction<string>>;
 }) => (
   <div
     key={name}
