@@ -11,6 +11,8 @@ export default function Navbar({ navStates, setNavStates }: NavbarProps) {
     { name: "Work" as const },
   ];
 
+  console.log(navStates);
+
   const handleClick = (name: string) => {
     setNavStates(name);
   };
